@@ -1,0 +1,17 @@
+{
+  "name": "trello-ui-test",
+  "type": "module",
+  "scripts": {
+    "test": "npx wdio run ./test/configs/wdio.conf.js"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^9.4.5",
+    "@wdio/mocha-framework": "^9.4.4",
+    "@wdio/spec-reporter": "^9.4.4"
+  },
+  "dependencies": {
+    "chromedriver": "^131.0.3",
+    "geckodriver": "^5.0.0",
+    "safaridriver": "^1.0.0"
+  }
+}
