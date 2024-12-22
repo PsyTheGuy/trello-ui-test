@@ -55,7 +55,8 @@ export const config = {
         'goog:chromeOptions': {
             args: [
                 '--headless',
-                '--disable-gpu' 
+                '--disable-gpu',
+                '--start-maximized'
             ]
         }
     }, {
