@@ -11,7 +11,9 @@
     "@wdio/spec-reporter": "^9.4.4"
   },
   "dependencies": {
+    "chai": "^5.1.2",
     "chromedriver": "^131.0.3",
+    "dotenv": "^16.4.7",
     "geckodriver": "^5.0.0",
     "safaridriver": "^1.0.0"
   }
