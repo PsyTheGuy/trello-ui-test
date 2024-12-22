@@ -7,8 +7,8 @@ describe('When clicking on login button', () => {
         await HomePage.open('home')
 
         await HomePage.click(HomePage.elements.buttonLogin)
-        await expect(LoginPage.callForAction).toBeExisting()
-        await expect(LoginPage.callForAction).toHaveText(
+        await expect(LoginPage.messageAction).toBeExisting()
+        await expect(LoginPage.messageAction).toHaveText(
             expect.stringContaining('Log in to continue'))
     })
 })
