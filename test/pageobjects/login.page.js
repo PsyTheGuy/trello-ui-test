@@ -1,37 +1,36 @@
-import { $ } from '@wdio/globals'
-import Page from './page.js';
+import { $ } from "@wdio/globals";
+import Page from "./page.js";
 
 class LoginPage extends Page {
- 
-    get messageAction () {
-        return $('div[data-testid="header-suffix"]')
-    }
+  get messageAction() {
+    return $('div[data-testid="header-suffix"]');
+  }
 
-    get messageError () {
-        return $('section[data-testid="form-error"]')
-    }
+  get messageError() {
+    return $('section[data-testid="form-error"]');
+  }
 
-    get inputUsername () {
-        return $('input[data-testid="username"]');
-    }
+  get inputUsername() {
+    return $('input[data-testid="username"]');
+  }
 
-    get inputPassword () {
-        return $('input[data-testid="password"]');
-    }
+  get inputPassword() {
+    return $('input[data-testid="password"]');
+  }
 
-    get buttonSubmit () {
-        return $('button[type="submit"]');
-    }
+  get buttonSubmit() {
+    return $('button[type="submit"]');
+  }
 
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.buttonSubmit.click();
-    }
+  async enterUsername(username) {
+    await this.inputUsername.setValue(username);
+    await this.buttonSubmit.click();
+  }
 
-    open () {
-        return super.open('login');
-    }
+  async enterPassword(password) {
+    await this.inputPassword.setValue(password);
+    await this.buttonSubmit.click();
+  }
 }
 
 export default new LoginPage();
