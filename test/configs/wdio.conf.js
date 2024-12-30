@@ -59,14 +59,14 @@ export const config = {
       maxInstances: 2,
       browserName: "chrome",
       "goog:chromeOptions": {
-        //args: ["--headless", "--disable-gpu", "--start-maximized"],
+        args: ["--headless", "--disable-gpu", "--start-maximized"],
       },
     },
     {
       maxInstances: 2,
       browserName: "firefox",
       "moz:firefoxOptions": {
-        //args: ["-headless"],
+        args: ["-headless"],
       },
     },
   ],
