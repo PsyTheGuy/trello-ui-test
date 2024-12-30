@@ -1,36 +1,36 @@
-import { $ } from "@wdio/globals";
-import Page from "./page.js";
+import { $ } from '@wdio/globals'
+import Page from './page.js'
 
 class LoginPage extends Page {
   get messageAction() {
-    return $('div[data-testid="header-suffix"]');
+    return $('div[data-testid="header-suffix"]')
   }
 
   get messageError() {
-    return $('section[data-testid="form-error"]');
+    return $('section[data-testid="form-error"]')
   }
 
   get inputUsername() {
-    return $('input[data-testid="username"]');
+    return $('input[data-testid="username"]')
   }
 
   get inputPassword() {
-    return $('input[data-testid="password"]');
+    return $('input[data-testid="password"]')
   }
 
   get buttonSubmit() {
-    return $('button[type="submit"]');
+    return $('button[type="submit"]')
   }
 
   async enterUsername(username) {
-    await this.inputUsername.setValue(username);
-    await this.buttonSubmit.click();
+    await this.inputUsername.setValue(username)
+    await this.buttonSubmit.click()
   }
 
   async enterPassword(password) {
-    await this.inputPassword.setValue(password);
-    await this.buttonSubmit.click();
+    await this.inputPassword.setValue(password)
+    await this.buttonSubmit.click()
   }
 }
 
-export default new LoginPage();
+export default new LoginPage()

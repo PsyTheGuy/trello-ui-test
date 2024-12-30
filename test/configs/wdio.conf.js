@@ -4,7 +4,7 @@ export const config = {
   // Runner Configuration
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
-  runner: "local",
+  runner: 'local',
   //
   // ==================
   // Specify Test Files
@@ -22,10 +22,10 @@ export const config = {
   //
   specs: [
     [
-      "../specs/navigation.feature.js",
-      "../specs/login.feature.js",
-      "../specs/create-board.feature.js",
-      "../specs/search-board.feature.js",
+      '../specs/navigation.feature.js',
+      '../specs/login.feature.js',
+      '../specs/create-board.feature.js',
+      '../specs/search-board.feature.js',
     ],
   ],
   // Patterns to exclude.
@@ -57,16 +57,16 @@ export const config = {
   capabilities: [
     {
       maxInstances: 2,
-      browserName: "chrome",
-      "goog:chromeOptions": {
-        args: ["--headless", "--disable-gpu", "--start-maximized"],
+      browserName: 'chrome',
+      'goog:chromeOptions': {
+        args: ['--headless', '--disable-gpu', '--start-maximized'],
       },
     },
     {
       maxInstances: 2,
-      browserName: "firefox",
-      "moz:firefoxOptions": {
-        args: ["-headless"],
+      browserName: 'firefox',
+      'moz:firefoxOptions': {
+        args: ['-headless'],
       },
     },
   ],
@@ -77,7 +77,7 @@ export const config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "error",
+  logLevel: 'error',
   //
   // Set specific log levels per logger
   // loggers:
@@ -125,7 +125,7 @@ export const config = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: "mocha",
+  framework: 'mocha',
   //
   // The number of times to retry the entire specfile when it fails as a whole
   // specFileRetries: 1,
@@ -141,15 +141,15 @@ export const config = {
   // see also: https://webdriver.io/docs/dot-reporter
   reporters: [
     [
-      "spec",
+      'spec',
       {
         showPreface: false,
       },
     ],
     [
-      "allure",
+      'allure',
       {
-        outputDir: "allure-results",
+        outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: true,
       },
@@ -158,7 +158,7 @@ export const config = {
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
   mochaOpts: {
-    ui: "bdd",
+    ui: 'bdd',
     timeout: 60000,
     retries: 2,
   },
@@ -320,4 +320,4 @@ export const config = {
    */
   // afterAssertion: function(params) {
   // }
-};
+}

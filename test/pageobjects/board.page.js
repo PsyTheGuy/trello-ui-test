@@ -1,10 +1,10 @@
-import { $ } from "@wdio/globals";
-import Page from "./page";
+import { $ } from '@wdio/globals'
+import Page from './page'
 
 class BoardPage extends Page {
-  get titleBoard () {
-    return $('h1[data-testid="board-name-display"]');
-  };
-};
+  get titleBoard() {
+    return $('h1[data-testid="board-name-display"]')
+  }
+}
 
-export default new BoardPage();
+export default new BoardPage()
